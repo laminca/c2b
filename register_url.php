@@ -59,7 +59,7 @@ $response= curl_exec($ch);
 curl_close($ch);
 echo $response;
 
-/*
+
 
 
 $ch = curl_init('https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate');
@@ -80,6 +80,6 @@ echo $response;
 
 
 
-*/
+
 
 ?>
