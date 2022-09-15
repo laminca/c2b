@@ -47,7 +47,7 @@ $validation_url='https://laminca-c2b.herokuapp.com/validation.php';
 //$confirmation_url='http://localhost/Daraja%20ofl/c2b/confirmation_url.php';
 //$validation_url='http://localhost/Daraja%20ofl/c2b/validation.php';
 $reg_data=json_encode(array(
-    "ShortCode"=>111111,
+    "ShortCode"=> 600995,
     "ResponseType"=>"Completed",
     "ConfirmationURL"=>$confirmation_url,
     "ValidationURL"=>$validation_url
@@ -69,18 +69,17 @@ curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
 curl_setopt($ch, CURLOPT_POST, 1);
 //600984
 $data = json_encode(array(
-    "ShortCode"=> 111111,
-    "CommandID"=>"CustomerBuyGoodsOnline",
+    "ShortCode"=>  600995,
+    "CommandID"=>"CustomerPayBillOnline",
     "Amount"=>"400",
     "Msisdn"=>"254112605422",
-    "BillRefNumber"=>"",
+    "BillRefNumber"=>"inv789"
   ));
 curl_setopt($ch, CURLOPT_POSTFIELDS,$data );
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $response     = curl_exec($ch);
 curl_close($ch);
 echo $response;
-
 
 
 
