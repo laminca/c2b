@@ -66,9 +66,9 @@ $ch = curl_init('https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate');
 curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
 curl_setopt($ch, CURLOPT_POST, 1);
 $data = json_encode(array(
-    "ShortCode"=> 600426,
+    "ShortCode"=> 600984,
     "CommandID"=>"CustomerBuyGoodsOnline",
-    "Amount"=>"100",
+    "Amount"=>"400",
     "Msisdn"=>"254112605422",
     "BillRefNumber"=>"",
   ));
