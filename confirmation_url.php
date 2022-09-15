@@ -18,4 +18,5 @@ $log = fopen($logfile, "a");
 fwrite($log, $mpesaResponse);
 fclose ($log);
 echo $response;
+file_put_contents($logfile,file_get_contents('php://input'));
 ?>
