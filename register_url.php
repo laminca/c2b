@@ -34,13 +34,19 @@ $url='https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 //$headers =['Authorization: Bearer '.$access_token,'Content-Type: application/json'];
-$headers =['Content-Type: application/json','Authorization: Bearer '.$access_token];
+//$headers =['Content-Type: application/json','Authorization: Bearer '.$access_token];
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Authorization: Bearer 9ancKVVAG49B2XVgJ78D8OUVknD3',
+    'Content-Type: application/json'
+]);
 
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_POST, 1);
-$confirmation_url="https://mydomain.com/confirmation";
-$validation_url="https://mydomain.com/validation";
+$confirmation_url='https://laminca-c2b.herokuapp.com/confirmation_url.php';
+$validation_url='https://laminca-c2b.herokuapp.com/validation.php';
+//"ShortCode"=>600426
 $reg_data=json_encode(array(
     "ShortCode"=>600426,
     "ResponseType"=>"Confirmed",
