@@ -15,7 +15,7 @@ $logfile="/laminca-c2b.herokuapp.com/my_response.txt";
 $json = json_decode($mpesaResponse,true);
 
 $log = fopen($logfile, "a");
-fwrite($log, $mpesaResponse);
+fwrite($log, "im working");
 fclose ($log);
 file_put_contents($logfile,file_get_contents('php://input'));
 
