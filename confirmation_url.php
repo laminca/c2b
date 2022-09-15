@@ -3,7 +3,7 @@
 header("Content-Type: application/json");
 
 $response = '{
-    "ResultCode": 563,
+    "ResultCode": 0,
     "ResultDesc":"Confirmstion Received Successfully"
 
 }';
