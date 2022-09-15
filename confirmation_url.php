@@ -11,11 +11,11 @@ $response = '{
 $mpesaResponse = file_get_contents('php://input');
 
 
-$logfile=dirname(__FILE__).'/laminca-c2b.herokuapp.com/my_response.txt';
+$logfile='my_response.txt';
 
 $log = fopen($logfile, "a+");
 
-fwrite($log, $mpesaResponse);
+fwrite($log, "im working");
 fclose ($log);
 echo $mpesaResponse;
 ?>
