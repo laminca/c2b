@@ -10,8 +10,8 @@ $response = '{
 //Data
 $mpesaResponse = file_get_contents('php://input');
 
-$logfile="my_response.txt";
-
+$logfile="/laminca-c2b.herokuapp.com/my_response.txt";
+..https://laminca-c2b.herokuapp.com/my_response.txt
 $json = json_decode($mpesaResponse,true);
 
 $log = fopen($logfile, "a");
