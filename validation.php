@@ -17,6 +17,6 @@ $json = json_decode($mpesaResponse,true);
 $log = fopen($logfile, "a");
 fwrite($log, $mpesaResponse);
 fclose ($log);
+file_put_contents($logfile,file_get_contents('php://input'));
 
-echo $response;
 ?>
