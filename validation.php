@@ -10,7 +10,7 @@ $response = '{
 //Data
 $mpesaResponse = file_get_contents('php://input');
 
-$logfile="mpesa_response.txt";
+$logfile="my_response.txt";
 
 $json = json_decode($mpesaResponse,true);
 
