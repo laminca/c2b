@@ -15,7 +15,7 @@ function tuma(){
 $url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
 $ch = curl_init();
 curl_setopt($ch , CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_HTTPHEADER,  ['Authorization: Basic ' . base64_encode('cXlVra0UqXuhKGtAZONqjVbOLhvtyIHn:3GEVyIhsgby98r1w')]);
+curl_setopt($ch, CURLOPT_HTTPHEADER,  ['Authorization: Basic ' . base64_encode('5YtmNHkYNuLxAk8uZxBtLXp10jmGHdXy:EkM9Du6CJHkwtkgy')]);
 //['Authorization: Bearer cFJZcjZ6anEwaThMMXp6d1FETUxwWkIzeVBDa2hNc2M6UmYyMkJmWm9nMHFRR2xWOQ==']
 //['Authorization: Bearer cFJZcjZ6anEwaThMMXp6d1FETUxwWkIzeVBDa2hNc2M6UmYyMkJmWm9nMHFRR2xWOQ==']
 // ['Authorization: Basic ' . base64_encode('cXlVra0UqXuhKGtAZONqjVbOLhvtyIHn:3GEVyIhsgby98r1w')]
