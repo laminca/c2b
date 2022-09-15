@@ -17,11 +17,11 @@ if($e =curl_error($ch)){
 
 
 
-$logfile="mpesa_response.txt";
+$logfile="my_response.txt";
 
 $json = json_decode($mpesaResponse,true);
 
-$log = fopen("mpesa_response.txt", "a");
+$log = fopen($logfile, "a");
 fwrite($log, $mpesaResponse);
 fclose ($log);
 echo $response;
