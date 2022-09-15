@@ -48,7 +48,7 @@ $validation_url='https://laminca-c2b.herokuapp.com/validation.php';
 //$validation_url='http://localhost/Daraja%20ofl/c2b/validation.php';
 $reg_data=json_encode(array(
     "ShortCode"=>600984,
-    "ResponseType"=>"Confirmed",
+    "ResponseType"=>"Completed",
     "ConfirmationURL"=>$confirmation_url,
     "ValidationURL"=>$validation_url
 
