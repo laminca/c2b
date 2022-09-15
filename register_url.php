@@ -40,7 +40,7 @@ $headers =['Authorization: Bearer '.$access_token,'Content-Type: application/jso
 
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_POST, 1);
+
 $confirmation_url='https://laminca-c2b.herokuapp.com/confirmation_url.php';
 $validation_url='https://laminca-c2b.herokuapp.com/validation.php';
 //"ShortCode"=>600426
@@ -53,8 +53,10 @@ $reg_data=json_encode(array(
     "ValidationURL"=>$validation_url
 
 ));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$reg_data);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
 $response= curl_exec($ch);
 curl_close($ch);
 echo $response;
