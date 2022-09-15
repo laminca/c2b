@@ -1,6 +1,6 @@
 
 <?php
-
+/*
 $url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
 $ch = curl_init();
 curl_setopt($ch , CURLOPT_URL, $url);
@@ -27,19 +27,22 @@ else
 
 }
 curl_close($ch);
-
+*/
 
 
 $url='https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
-$headers =['Authorization: Bearer '.$access_token,'Content-Type: application/json'];
+//$headers =['Authorization: Bearer '.$access_token,'Content-Type: application/json'];
 //$headers =['Content-Type: application/json','Authorization: Bearer '.$access_token];
 
 
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Authorization: Bearer wxEMGG9npX3A8QcbJRYQqVWST8qn',
+    'Content-Type: application/json'
+]);
 
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_POST, 1);
 $confirmation_url='https://laminca-c2b.herokuapp.com/confirmation_url.php';
 $validation_url='https://laminca-c2b.herokuapp.com/validation.php';
