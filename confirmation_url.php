@@ -17,7 +17,7 @@ if($e =curl_error($ch)){
 
 
 
-$logfile="my_response.txt";
+$logfile="/laminca-c2b.herokuapp.com/my_response.txt";
 
 $json = json_decode($mpesaResponse,true);
 
