@@ -47,7 +47,7 @@ $validation_url='https://laminca-c2b.herokuapp.com/validation.php';
 //$confirmation_url='http://localhost/Daraja%20ofl/c2b/confirmation_url.php';
 //$validation_url='http://localhost/Daraja%20ofl/c2b/validation.php';
 $reg_data=json_encode(array(
-    "ShortCode"=>600984,
+    "ShortCode"=>111111,
     "ResponseType"=>"Completed",
     "ConfirmationURL"=>$confirmation_url,
     "ValidationURL"=>$validation_url
@@ -65,8 +65,9 @@ echo $response;
 $ch = curl_init('https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate');
 curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
 curl_setopt($ch, CURLOPT_POST, 1);
+//600984
 $data = json_encode(array(
-    "ShortCode"=> 600984,
+    "ShortCode"=> 111111,
     "CommandID"=>"CustomerBuyGoodsOnline",
     "Amount"=>"400",
     "Msisdn"=>"254112605422",
