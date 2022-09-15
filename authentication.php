@@ -12,7 +12,7 @@
 <body>
     <div style="text-align: center;">
         <p>
-        <h3>Would you like to authenticate your api key?</h3>
+        <h3>Would you like to authenticate your Supreme court api key?</h3>
         </p>
         <br>
 
